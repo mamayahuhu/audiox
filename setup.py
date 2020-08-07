@@ -13,11 +13,11 @@ __author__ = "Gary Lai"
 MAJOR = 0
 MINOR = 0
 MICRO = 1
-IS_RELEASED = True
+IS_RELEASED = False
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
 PROJECT_NAME = 'audiox'
-
+VERSION_PY = '{0}/version.py'.format(PROJECT_NAME)
 
 # Return the git revision as a string
 def get_dev_version():
@@ -90,8 +90,6 @@ if not release:
     finally:
         a.close()
 
-
-VERSION_PY = '{0}/version.py'.format(PROJECT_NAME)
 
 if sys.version_info[:2] < (3, 6):
     raise RuntimeError("Python version >= 3.6 required.")
